@@ -7,3 +7,32 @@ teaching-20180716
 https://blog.csdn.net/coder_pig/article/details/79134625
 https://blog.csdn.net/junhuahouse/article/details/79194069
 https://blog.csdn.net/huaxun66/article/details/53401231
+
+import os
+import sys
+import read
+
+print(os.path.abspath('main.py')
+print(os.getcwd())
+file_dir = os.gitcwd()
+print(file_dir)
+#root dirs files
+for root,dirs,files in os.walk(file_dir):
+	for file in files:
+		if file.endswith('.c'):
+			obsfile = os.path.join(root,,file)
+			print(obsfile)
+			
+			file_o = open(obsfile,'r')
+			w_str = ''
+			for line in file_o:
+				if re.rearch('yangwen',line):
+					line = re.sub('yangwen','wenyang',line)
+					w_str += line
+				else:
+					w_str += line
+				#print(w_str)
+			file_w = open(obsfile,'w')
+			file_w.write(w_str)
+			file_o.close()
+			file_w.close()
